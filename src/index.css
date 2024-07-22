@@ -5,9 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('https://media.istockphoto.com/id/1193476717/photo/male-hands-making-a-to-do-list-in-a-notebook-over-an-office-desk.webp?b=1&s=170667a&w=0&k=20&c=p7MUCCTnL9eCmBr0FEBNs_4GFPg7yniFVz3m94k5OQQ='); 
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
 }
 .edit-btn,
-.delete-btn{
+.delete-btn {
   background: transparent;
   border-color: transparent;
   cursor: pointer;
@@ -15,31 +20,74 @@ body {
   margin: 0 0.10rem;
   transition: all 0.3s linear;
 }
-.edit-btn{
+.edit-btn {
   color: rgb(170, 231, 28);
 }
-.delete-btn{
-  color:red;
+.delete-btn {
+  color: red;
 }
 
-.section{
+.section {
   padding: 5rem 0;
 }
-.section-center{
-  width:90 vw;
-  margin:0 auto;
-  max-width:35rem;
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
   margin-top: 8rem;
-  background: white;
+  background: rgba(255, 255, 255, 0.9); 
   border-radius: 0.30rem;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   padding: 2rem;
 }
-.form{
+
+.form-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
 }
+.task-form, .form-control, .search-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.task-form input, .form-control input, .search-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.task-form button, .form-control button, .search-form button {
+  width: 100%;
+}
+.category-container {
+  margin-top: 2rem;
+}
+.task-form button {
+  background-color: #6ad884; 
+  color: white;
+}
+.task-form button:hover {
+  background-color: #076b1d; 
+}
+.search-form button {
+  background-color: #75d7f0; 
+  color: white;
+}
+.search-form button:hover {
+  background-color: #178a84; 
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@media (max-width: 768px) {
+  .section-center {
+    padding: 1rem;
+  }
+  .task-form, .form-control, .search-form {
+    flex-direction: column;
+  }
 }
