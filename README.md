@@ -29,12 +29,14 @@ To run this project locally, follow these steps:
 
 2. **Navigate to the project directory:**
    cd todo-app
-3. Install dependencies:npm install
+3. Install dependencies:
+   npm install
+   
    npm install react-icons
 
 4.To start the application, run:
   npm start
 
-  ## Usage
+  
 
   
